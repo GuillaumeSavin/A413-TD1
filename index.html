@@ -3,13 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>exercice 1</title>
+    <script type="text/javascript" src="js/code.js"></script>
 </head>
-<body>
-    <h1>Balise h1</h1>
+<body onload="init()">
+
+    <h1 id="titre" class="firstOrLast">Balise h1</h1>
     <h2>1.Balise h2</h2>
-    <h2>2.Balise h2</h2>
-    <h3>1.Balise h3</h3>
+    <h2 class="firstOrLast">2.Balise h2</h2>
+    <h3 class="firstOrLast">1.Balise h3</h3>
     <h3>2.Balise h3</h3>
     <h3>3.Balise h3</h3>
+
+    <h4>Réponses 6.1 La propriété document.title</h4>
+    <p>-L'évènement qui déclenche l'appelle de la fonction est onload qui dans le fichier html se retranscrit avec :<br> &lt;body onload="init()"&gt; </p>
+    <p>-La méthode utilisée pour récupérer l'objet représentant ma balise h1 est :<br>document.getElementById("titre")</p>
+    <p>-La propriété de l'objet représentant ma balise pour récupérer son texte est innerText ce qui donne : <br> document.getElementById("titre").innerText</p>
+    <p>-La méthode que j'ai utilisé pour récupérer l'objet représentant ma balise h2 est : <br>document.getElementsByTagName("h2")[0]</p>
+    <p>-Pour connaitre le nombre de balise h2 dans le document, il faut d'abord obtenir la liste des balises h2 et utiliser length pour obtenir sa taille : <br>let liste_h2 = document.getElementsByTagName("h2")<br>let taille_liste = liste_h2.length </p>
+    <p>-La méthode que j'ai utilisé pour récupérer l'objet de ma classe est : <br>document.getElementsByClassName("firstOrLast")</p>
+    <p>-Il fonctionne avec mon code en utilisant innerText</p>
+    <p>-Pour déterminer si un nombre est pair, je l'ai divisé par 2, s'il est pair alors le reste est égale à 0, sinon il est impair :<br>taille_liste % 2</p>
+
+    <h4>Réponses 6.2 Les propriétés innerHTML, innerText, outerHTML, outerText et textContent</h4>
 </body>
 </html>
