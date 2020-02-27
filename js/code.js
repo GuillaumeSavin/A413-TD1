@@ -58,3 +58,13 @@ function defTitre4()
         }
     }
 }
+
+function inverseTexte()
+{
+    let first_p = document.getElementById("inverse1").innerText
+    let second_p = document.getElementById("inverse2").innerText
+
+    document.getElementById("inverse1").innerText = second_p
+    document.getElementById("inverse2").innerText = first_p
+
+}
