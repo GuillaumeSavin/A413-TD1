@@ -4,6 +4,7 @@ function init()
     defTitre2()
     defTitre3()
     defTitre4()
+    datemodif()
 }
 
 function defTitre1()
@@ -61,10 +62,29 @@ function defTitre4()
 
 function inverseTexte()
 {
-    let first_p = document.getElementById("inverse1").innerText
-    let second_p = document.getElementById("inverse2").innerText
+    let first_p = document.getElementById("inverse1").innerHTML
+    let second_p = document.getElementById("inverse2").innerHTML
 
-    document.getElementById("inverse1").innerText = second_p
-    document.getElementById("inverse2").innerText = first_p
+    document.getElementById("inverse1").innerHTML = second_p
+    document.getElementById("inverse2").innerHTML = first_p
+}
 
+function datemodif()
+{
+    date = new Date()
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
+    author = document.getElementsByTagName("meta")[1].content
+    description = document.getElementsByTagName("meta")[2].content
+    keywords = document.getElementsByTagName("meta")[3].content
+
+    console.log(author)
+    console.log(description)
+    console.log(keywords)
+
+    //date.getDate()
+    date = date.toLocaleDateString("fr_FR",options)
+
+    console.log(date)
+
+    document.getElementById("date_modif").innerText = date
 }
