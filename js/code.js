@@ -72,19 +72,26 @@ function inverseTexte()
 function datemodif()
 {
     date = new Date()
+    nb_author = document.getElementsByName("author").length
+    console.log(nb_author)
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
     author = document.getElementsByTagName("meta")[1].content
     description = document.getElementsByTagName("meta")[2].content
     keywords = document.getElementsByTagName("meta")[3].content
+    last_author = document.getElementsByTagName("meta")[nb_author].content
 
     console.log(author)
+    console.log(last_author)
     console.log(description)
     console.log(keywords)
 
-    //date.getDate()
-    date = date.toLocaleDateString("fr_FR",options)
+    date.getDate()
+    date = date.toLocaleString('fr-FR')
+    contenu = "Derniere modification : le " + date + " par " + author
+    contenu2 = "\n Derniere modification : le " + date + " par " + last_author
 
-    console.log(date)
+    console.log(contenu)
 
-    document.getElementById("date_modif").innerText = date
+    document.getElementById("date_modif").innerText = contenu
+    document.getElementById("date_modif").innerText += contenu2
 }

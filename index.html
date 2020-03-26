@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Savin Guillaume">
+    <meta name="author" content="Guillaume Savin">
+    <meta name="author" content="Peggy Calderon">
     <meta name="description" content="Programmation Web - client riche M4103 -TD n°1">
     <meta name="keywords" content="HTML,CSS,M4103,JS,TD1">
     <title>exercice 1</title>
@@ -33,6 +35,7 @@
 
 
 
+
     <h4>Réponses 6.1 La propriété document.title</h4>
     <p>-L'évènement qui déclenche l'appelle de la fonction est onload qui dans le fichier html se retranscrit avec :<br> &lt;body onload="init()"&gt; </p>
     <p>-La méthode utilisée pour récupérer l'objet représentant ma balise h1 est :<br>document.getElementById("titre")</p>
@@ -51,6 +54,8 @@
     <p>-Internet explorer ne supporte pas toutes les propriétés</p>
 
     <h4>Réponses 6.3 La propriété document.lastModified</h4>
+    <p>- Pour sélectionner le 1er auteur de la liste, j'ai utilisé le "tableau de contenu" de la balise meta en prenant la 1ère référence qui est celle de l'auteur : <br> document.getElementsByTagName("meta")[1]</p>
+    <p>- Pour sélectionner le dernier auteur de la liste, j'ai utilisé le "tableau de contenu" de l'élément author pour retrouver le nombre d'auteur et l'utiliser comme référence pour le tableau meta : <br> nb_author = document.getElementsByName("author").length </br>document.getElementsByTagName("meta")[nb_author]</p>
 
     <div id="date_modif"></div>
 </body>
